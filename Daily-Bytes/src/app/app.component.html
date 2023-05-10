@@ -1,0 +1,28 @@
+<div>
+  <!-- Header start -->
+  <p>Hi<span>👋</span> here is today's knowledge byte</p>
+  <!-- Header End -->
+  <hr>
+
+  <!-- Main Information start -->
+  <div class="summaryWrapper">
+    <h3 class="summaryHeading">{{ title }}</h3>
+    <p class="summary">
+      {{ extract }}
+    </p>
+  </div>
+  <!-- Main Information End -->
+
+  <!-- rest info link -->
+  <div class="centerWrapper">
+    <button class="readMoreBtn">
+      Read More ...
+    </button>
+  </div>
+  <hr>
+  <div class="centerWrapper">
+    <button class="getNewInfo" (click)="getNewArticle()">
+      Generate Random Article 
+    </button>
+  </div>
+</div>
