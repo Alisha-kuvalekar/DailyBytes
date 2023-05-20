@@ -1,0 +1,47 @@
+.summaryHeading {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.head1 {
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Read More Button style */
+.readMoreBtn {
+    margin: 5px 0px 5px 0px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 3px;
+    padding: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Get New Info button styling*/
+.centerWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.getNewInfo {
+    background-color: green;
+    color: white;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 7px;
+    cursor: pointer;
+    border: none;
+    margin-top: 15px;
+}
+
+.mainInfo {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
