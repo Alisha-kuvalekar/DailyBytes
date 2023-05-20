@@ -5,8 +5,8 @@ const createWindow = () => {
     title: 'Daily Bytes',
     width: 700,
     height: 500,
-    //autoHideMenuBar: true,
-    backgroundColor: '#f7f2f2'
+    autoHideMenuBar: true,
+    backgroundColor: '#dcd0ff'
   });
 
   win.loadFile('dist/daily-bytes/index.html');

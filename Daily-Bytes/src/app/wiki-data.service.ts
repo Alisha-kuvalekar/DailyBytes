@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class WikiDataService {
 
-  private url = 'http://en.wikipedia.org/w/api.php?action=query&generator=random&grnnamespace=0&prop=extracts&exintro&explaintext&redirects=1&format=json';
+  private url = 'http://en.wikipedia.org/w/api.php?action=query&generator=random&grnnamespace=0&prop=extracts&exintro&explaintext&format=json';
   constructor( private http : HttpClient) { }
 
   public getRandomWikiArticle() : Observable<any>{

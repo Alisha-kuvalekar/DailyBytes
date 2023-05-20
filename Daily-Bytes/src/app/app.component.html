@@ -1,28 +1,38 @@
 <div>
-  <!-- Header start -->
-  <p>Hi<span>👋</span> here is today's knowledge byte</p>
-  <!-- Header End -->
-  <hr>
-
-  <!-- Main Information start -->
-  <div class="summaryWrapper">
-    <h3 class="summaryHeading">{{ title }}</h3>
-    <p class="summary">
-      {{ extract }}
-    </p>
+  <div *ngIf="showSummary">
+    <!-- Header start -->
+    <div class="head1">
+      <p>Hi, here is today's article &nbsp;<i class="fas fa-lightbulb" aria-hidden="true"></i></p>
+    </div>
+    <!-- Header End -->
+    
+    <!-- Main Information start -->
+    <div class="mainInfo">
+      <div class="summaryWrapper" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+        <h3 class="summaryHeading">{{ title }}</h3>
+        <p class="summary">
+          {{ extract }}
+        </p>
+      </div>
+  
+      <!-- rest info link -->
+      <div class="centerWrapper">
+        <button class="readMoreBtn" (click)="readMore()">
+          Read More on Wiki &nbsp;<i class="fa fa-external-link" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Main Information End -->
   </div>
-  <!-- Main Information End -->
-
-  <!-- rest info link -->
-  <div class="centerWrapper">
-    <button class="readMoreBtn">
-      Read More ...
-    </button>
+  <div *ngIf="showError" style="text-align: center;">
+    <i class="fa fa-warning" style="font-size:36px" aria-hidden="true"></i>
+    <br> <br>
+    Oops! Something went wrong. Please try again later.
   </div>
-  <hr>
+
   <div class="centerWrapper">
     <button class="getNewInfo" (click)="getNewArticle()">
-      Generate Random Article 
+      Generate Random Article &nbsp;<i class="fa fa-refresh" aria-hidden="true"></i>
     </button>
   </div>
 </div>

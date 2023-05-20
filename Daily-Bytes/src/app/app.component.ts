@@ -8,9 +8,9 @@ import { WikiDataService } from './wiki-data.service';
 })
 export class AppComponent {
 
-  public title: any;
-  public extract: any;
-  public url: string = "213";
+  public title: any = "Hold on, loading...";
+  public extract: any = "Getting there in a moment...";
+
   pageId: string = '';
   showSummary: boolean = true;
   showError: boolean = false;
@@ -22,6 +22,9 @@ export class AppComponent {
     this.getRandomArticle();
   }
 
+  /**
+   * Get a random Article from wikipedia
+   */
   private getRandomArticle(): void{
     try {
       this.wikiService.getRandomWikiArticle().subscribe({
@@ -44,12 +47,15 @@ export class AppComponent {
     }
   }
 
-  private getArticleUrl(pageId: number): string {
-    return 'asdhas';
-  }
-
+  /**
+   * Get a New random article
+   */
   public getNewArticle(): void {
     this.getRandomArticle();
-    this.url = "asda";
+  }
+
+  public readMore(): void{
+    const url = `http://en.wikipedia.org/wiki?curid=${this.pageId}`
+    window.open(url,"_blank");
   }
 }
